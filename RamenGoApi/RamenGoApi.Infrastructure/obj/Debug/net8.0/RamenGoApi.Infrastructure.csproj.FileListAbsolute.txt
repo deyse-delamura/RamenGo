@@ -1,0 +1,16 @@
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\bin\Debug\net8.0\RamenGoApi.Infrastructure.deps.json
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\bin\Debug\net8.0\RamenGoApi.Infrastructure.dll
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\bin\Debug\net8.0\RamenGoApi.Infrastructure.pdb
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\bin\Debug\net8.0\RamenGoApi.Domain.dll
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\bin\Debug\net8.0\RamenGoApi.Domain.pdb
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoApi.Infrastructure.csproj.AssemblyReference.cache
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoApi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoApi.Infrastructure.AssemblyInfoInputs.cache
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoApi.Infrastructure.AssemblyInfo.cs
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoApi.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoApi.Infrastructure.sourcelink.json
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoA.7DBDBC92.Up2Date
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoApi.Infrastructure.dll
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\refint\RamenGoApi.Infrastructure.dll
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\RamenGoApi.Infrastructure.pdb
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Infrastructure\obj\Debug\net8.0\ref\RamenGoApi.Infrastructure.dll

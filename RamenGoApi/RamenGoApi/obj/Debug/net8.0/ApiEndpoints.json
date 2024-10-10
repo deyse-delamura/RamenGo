@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "RamenGoApi.Controllers.CaldoController",
+    "Method": "GetCaldos",
+    "RelativePath": "Caldo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RamenGoApi.Controllers.PedidoController",
+    "Method": "RealizarPedido",
+    "RelativePath": "Pedido/Realizar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RamenGoApi.Application.DTOs.PedidoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RamenGoApi.Controllers.ProteinaController",
+    "Method": "GetProteinas",
+    "RelativePath": "Proteina",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

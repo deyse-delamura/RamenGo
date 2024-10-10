@@ -1,0 +1,12 @@
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\bin\Debug\net8.0\RamenGoApi.Domain.deps.json
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\bin\Debug\net8.0\RamenGoApi.Domain.dll
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\bin\Debug\net8.0\RamenGoApi.Domain.pdb
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\RamenGoApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\RamenGoApi.Domain.AssemblyInfoInputs.cache
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\RamenGoApi.Domain.AssemblyInfo.cs
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\RamenGoApi.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\RamenGoApi.Domain.sourcelink.json
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\RamenGoApi.Domain.dll
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\refint\RamenGoApi.Domain.dll
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\RamenGoApi.Domain.pdb
+C:\Projetos\ramen-go\RamenGo\RamenGoApi\RamenGoApi.Domain\obj\Debug\net8.0\ref\RamenGoApi.Domain.dll
