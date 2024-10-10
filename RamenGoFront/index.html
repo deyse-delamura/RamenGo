@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RamenGo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rounded+Mplus+1c:wght@500;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Página 1: Capa -->   <!-- Container principal da capa -->  
+    <section class="grid-container" id="home-banner">
+            <div class="logo" id="logo">RamenGO!</div>
+        
+            <div class="japanese-text font-black" id="japanese-text">ラーメン</div>
+       
+            <div class="go-text font-black" id="go-text">GO!</div>
+      
+            <div class="description-text" id="description-text">
+                Enjoy a good ramen in the comfort of your house. <br>
+                Create your own ramen and choose your favorite flavor combination!
+            </div>
+       
+            <div class="order-now" id="order-now-button">
+              <button>ORDER NOW</button>
+            </div>
+       
+            <div class="illustration" id="illustration"></div>            
+    </section>    
+ 
+    <!-- Página 2: Seção de Seleção -->
+    <section id="selection-section" style="display: none;">
+        <section id="broth-selection">
+            <h2>First things first: select your favorite broth.</h2>
+            <p>It will give the whole flavor to your ramen soup.</p>
+            <div class="broth-options" id="broth-options">
+                <!-- Os cartões serão gerados dinamicamente aqui -->
+            </div>
+        </section>
+        
+        <section id="protein-selection">
+            <h2>It's time to choose (or not) your meat!</h2>
+            <p>Some people love, some don’t. We have options for all tastes.</p>
+            <div class="protein-options" id="protein-options">
+                <!-- Os cartões serão gerados dinamicamente aqui -->
+            </div>
+        </section>
+
+        <!-- Botão Place My Order -->
+        <button id="place-order">
+            <span></span>
+        </button>
+    </section>
+
+    <!-- Página 3: Confirmação de Pedido -->
+    <section id="confirmation-section">
+        <div id="confirmation-container">
+            <!-- Seção Esquerda: Resumo do Pedido -->
+            <div id="order-summary">
+                <img src="assets/images/lamen-miso 1.png" alt="Ramen Image" id="ramen-image"> <!-- Imagem dinâmica do ramen -->
+                <h2>Your Order:</h2>
+                <p class="order-description"></p> <!-- Descrição dinâmica do pedido -->
+            </div>
+
+            <!-- Seção Direita: Mensagem de Confirmação -->
+            <div id="confirmation-message">
+                <img src="assets/images/bowing.png" alt="Bowing Icon" id="confirmation-message-icon"> <!-- Ícone de agradecimento -->
+                <span id="thank-you-message">どもありがとうございます。</span>
+                <h1>Your order is being prepared</h1>
+                <p>Hold on, when you least expect you will be eating your ramen.</p>
+                <button id="place-order-button" onclick="window.location.reload();">
+                    <span>PLACE NEW ORDER</span>
+                    <img src="assets/btn/fill-1.png" alt="Arrow Icon" id="arrow-icon">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referência ao script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

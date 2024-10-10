@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;           
+    height: 100vh;    
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    background-color: #FAFAED; /* Cor de fundo */
+}
+
+/* Definição de pesos */
+.font-black {
+    font-weight: 900; /* Black */
+}
+
+.font-extra-bold {
+    font-weight: 800; /* Extra Bold */
+}
+
+.font-medium {
+    font-weight: 500; /* Medium */
+}
+
+/* Página 1: Capa */
+/* Container de Grid */
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    display: flex;
+    background-image: url('assets/images/pattern-vermelha.png');
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+/* Itens do Grid */
+.grid-item {
+    position: absolute;
+    display: block;
+}
+
+/* Definição das posições dos itens no grid em telas grandes */
+.logo {
+    color: #FFC024;
+    width:15%;
+    position: absolute;
+    top: 4%; 
+    left: 3%; 
+    display: block;
+    z-index: 2;
+}
+
+.go-text {
+    color: #FFFFFF;
+    font-size: 12vw;
+    font-weight: 900;
+    position: absolute; 
+    top: 27%; 
+    left: 25.5%;      
+    display: block;
+    z-index: 2;
+}
+
+.japanese-text {   
+    color: #FFC024;
+    font-size: 4.2vw;       
+    writing-mode: vertical-lr; 
+    text-orientation: mixed;
+    position: absolute;    
+    top: 18%; 
+    left: 19.5%; 
+    display: block;
+    z-index: 2;
+}
+
+.description-text {
+    font-size: 1.4vw;
+    color: white;
+    width: 20%;
+    position: absolute;
+    top: 56%; 
+    left: 21.5%; 
+    display: block;
+    z-index: 2;
+}
+
+.order-now {
+    width: 20%;
+    top: 80%; 
+    left: 21.5%; 
+    display: block;
+    position: absolute;
+}
+.order-now button{   
+    width: 100%; 
+    font-size: 1.2vw;
+    border-radius: 50px;
+    background: #1820EF;
+    color: #FFFFFF;
+    z-index: 2;
+    text-align: left;
+    padding: 20px 20px;
+}
+
+.illustration {
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    top: 50%; 
+    left: 50%;   
+    transform: translate(-30%, -50%);
+    display: block;
+    z-index: 1;
+    background-image: url('assets/images/Ilustracao.png'); 
+    background-size: auto 100%; 
+    background-repeat: no-repeat; 
+}
+
+/* Página 2: Seção de Seleção */
+#selection-section {
+    display: none; /* Escondido por padrão até ser ativado pela navegação */
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Configuração dos cartões de caldo e proteína */
+.broth-options, .protein-options {
+    display: flex;
+    justify-content: center;    
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.card {    
+    width: 20%;    
+    background-color: #FAFAED; 
+    border-radius: 11px 0px 0px 0px; 
+    box-shadow: 0px 4px 12px 0px #E0DBBF99;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 40px;
+    cursor: pointer; 
+}
+
+.card img {
+    height: auto;
+}
+
+.card span {
+    margin: 5px;
+}
+
+#item-title { 
+    font-size: 20px;
+    font-weight: 900;
+    color: #1820EF;
+}
+
+#item-desc { 
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+#item-price {
+    font-size: 20px;
+    font-weight: 900;
+    color: #FF4E42;
+    padding-top: 30px;
+}
+
+/* Estilo do cartão selecionado */
+.card.selected {
+    background-color: #1820EF; /* Cor azul ao selecionar */ 
+}
+
+.card.selected #item-title, .card.selected #item-desc{    
+    color: #FFFFFF  
+}
+
+.card.selected #item-price {
+    color: #FFC024;
+}
+
+/* Botão Place My Order com o estilo arredondado */
+#place-order {
+    background-image: url('assets/images/btn-placemyorder.png');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0;
+    border-radius: 50px; /* Adiciona contorno arredondado */
+    background-color: transparent;
+}
+
+/* Ajuste de hover para manter o arredondado e cor azul */
+#place-order:hover {
+    background-color: #1820EF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Pagina 3 Estilo geral da seção de confirmação */
+#confirmation-section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FAFAED; /* Cor de fundo */
+}
+
+#confirmation-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ajuste de largura para centralizar o conteúdo */
+    height: 100%;
+}
+
+/* Seção da Esquerda: Resumo do Pedido */
+#order-summary {
+    width: 50%; /* Ajustar para ocupar metade do espaço */ 
+    background-image: url('assets/images/pattern-azul.png'); 
+    background-repeat: repeat;
+    background-size: cover;
+    padding: 10px;
+    color: #FFC024; /* Cor do texto amarela */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;
+}
+
+#order-summary img {
+    width: 50%; /* Define a largura como 60% do tamanho da div pai */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem se comporte como um bloco dentro da div */
+    margin: 0 auto;
+}
+
+#order-summary h2 {
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: #FFFFFF; 
+    margin: 0px;
+}
+
+.order-description {
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: #FFC024; 
+    text-align: center;
+}
+
+/* Seção da Direita: Mensagem de Confirmação */
+#confirmation-message {
+    width: 50%; /* Ajustar para ocupar metade do espaço */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#confirmation-message-icon {
+    width: 70px; /* Tamanho do ícone de agradecimento */
+    height: auto;
+}
+
+#thank-you-message {
+    font-size: 24px;
+    color: #FFC024; /* Cor amarelo para o título */
+    font-family: 'Rounded Mplus 1c';
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+#confirmation-message h1 {
+    font-size: 30px;
+    color: #FF4E42;
+    margin: 0px;
+    font-weight: 900;
+    margin: 10px;
+}
+
+#confirmation-message p {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.78px;
+    margin: 0px;
+}
+
+/* Botão de Place New Order */
+#place-order-button {
+    background-color: #1820EF; /* Cor azul de fundo */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 30px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex; /* Para alinhar texto e imagem horizontalmente */
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Espaço entre o texto e a seta */    
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1.78px;
+    margin-top: 20px;
+}
+
+/* Ajuste para o texto dentro do botão */
+#place-order-button span {
+    display: inline-block;
+    line-height: 1; /* Remove espaçamento vertical extra */
+}
+
+/* Estilo do ícone dentro do botão */
+#arrow-icon {
+    width: auto; /* Tamanho do ícone */
+    height: auto;
+    vertical-align: middle; /* Centraliza o ícone verticalmente */
+}
+
+/* Responsividade para ajustar os cards em telas menores */
+@media (max-width: 768px) {
+    .broth-card, .protein-card {
+        width: 150px; /* Ajuste de largura em telas menores */
+        height: 240px; /* Ajuste de altura em telas menores */
+    }
+
+    .broth-options, .protein-options {
+        gap: 15px; /* Reduz o espaçamento entre os cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .broth-card, .protein-card {
+        width: 120px; /* Ajuste de largura em telas pequenas */
+        height: 200px; /* Ajuste de altura em telas pequenas */
+    }
+
+    .broth-options, .protein-options {
+        gap: 10px; /* Reduz ainda mais o espaçamento */
+    }
+}
+
