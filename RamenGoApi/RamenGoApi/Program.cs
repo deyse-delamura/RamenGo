@@ -3,6 +3,7 @@ using RamenGoApi.Domain.Repositories;
 using RamenGoApi.Domain.Services;
 using RamenGoApi.Infrastructure.ExternalServices;
 using RamenGoApi.Infrastructure.Persistence;
+using RamenGoApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +48,8 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<AuthenticationMiddleware>();
 
 app.UseAuthorization();
 
