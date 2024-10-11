@@ -46,7 +46,7 @@ Compile e execute a aplicação:
 dotnet build
 dotnet run
 ```
-A API estará disponível em http://localhost:5000/api/v1.
+A API estará disponível em [http://localhost:5000/api/v1.](https://ramengo-49427ced9460.herokuapp.com/)
 
 ### 💻 **3. Rodar o Frontend**
 Navegue até a pasta do front-end:
@@ -60,9 +60,7 @@ Abra o arquivo index.html no seu navegador ou use uma extensão como Live Server
 ## 📚 **Tecnologias Utilizadas**
 - **Backend**: .NET Core, C#, Arquitetura Hexagonal, DDD  
 - **Frontend**: HTML, CSS, JavaScript  
-- **Banco de Dados**: DynamoDB (para persistência de dados)  
 - **Ferramentas de Versionamento**: Git, GitHub  
-- **Docker**: Para deploy e ambientes isolados  
 
 ---
 
