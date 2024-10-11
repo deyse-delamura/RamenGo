@@ -9,24 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let selectedBroth = null;
     let selectedProtein = null;
-
-    // Map de imagens de acordo com o caldo selecionado
+    
     const brothImages = {
-        "1": "assets/images/lamen-salt.png", // ID do Salt
-        "2": "assets/images/lamen-soy.png",  // ID do Shoyu
-        "3": "assets/images/lamen-miso.png"  // ID do Miso
+        "1": "assets/images/lamen-salt.png",
+        "2": "assets/images/lamen-soy.png", 
+        "3": "assets/images/lamen-miso.png" 
     };
 
     homeBanner.addEventListener("click", function () {
-        homeBanner.style.display = "none"; // Esconder a capa
-        selectionSection.style.display = "block"; // Exibir a seção de seleção
-        loadBrothOptions(); // Carregar opções de caldos do backend
-        loadProteinOptions(); // Carregar opções de proteínas do backend
+        homeBanner.style.display = "none"; 
+        selectionSection.style.display = "block"; 
+        loadBrothOptions(); 
+        loadProteinOptions(); 
     });
 
     placeOrderButton.addEventListener("click", function () {
-        if (selectedBroth && selectedProtein) {
-            // Salvar o caldo selecionado no localStorage
+        if (selectedBroth && selectedProtein) {            
             localStorage.setItem("selectedBrothId", selectedBroth);
             realizarPedido(selectedBroth, selectedProtein);
         } else {
@@ -46,7 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function loadBrothOptions() {
-        fetch("https://localhost:44317/Caldo") // Substituir com o endpoint real do backend para caldos
+        fetch("https://ramengo-49427ced9460.herokuapp.com/Caldo", {
+            headers: {
+                 "X-API-KEY": "ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf"
+            }
+        })  
             .then(response => response.json())
             .then(data => {
                 brothOptionsContainer.innerHTML = data.map(item => createCard(item, "broth")).join("");
@@ -56,7 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function loadProteinOptions() {
-        fetch("https://localhost:44317/Proteina") // Substituir com o endpoint real do backend para proteínas
+        fetch("https://ramengo-49427ced9460.herokuapp.com/Proteina", {
+            headers: {
+                 "X-API-KEY": "ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf"
+            }
+        }) 
             .then(response => response.json())
             .then(data => {
                 proteinOptionsContainer.innerHTML = data.map(item => createCard(item, "protein")).join("");
@@ -71,10 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
             card.addEventListener("click", () => {
                 cards.forEach(c => {
                     c.classList.remove("selected");
-                    c.querySelector("img").src = c.dataset.inactive; // Resetar imagem para inativa
+                    c.querySelector("img").src = c.dataset.inactive; 
                 });
                 card.classList.add("selected");
-                card.querySelector("img").src = card.dataset.active; // Trocar para a imagem ativa
+                card.querySelector("img").src = card.dataset.active; 
                 if (type === "broth") selectedBroth = card.dataset.id;
                 if (type === "protein") selectedProtein = card.dataset.id;
             });
@@ -82,10 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function realizarPedido(caldoId, proteinaId) {
-        fetch("https://localhost:44317/Pedido/realizar", {
+        fetch("https://ramengo-49427ced9460.herokuapp.com/Pedido/Realizar", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "X-API-KEY": "ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf"
             },
             body: JSON.stringify({ caldoId: caldoId, proteinaId: proteinaId })
         })
@@ -97,14 +104,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function mostrarConfirmacao(pedidoId, descricao) {
-        selectionSection.style.display = "none"; // Esconder a seleção
-        confirmationSection.style.display = "block"; // Exibir a confirmação
+        selectionSection.style.display = "none"; 
+        confirmationSection.style.display = "block"; 
 
         const orderSummary = document.querySelector("#order-summary h2");
         const orderDescription = document.querySelector("#order-summary .order-description");
         const ramenImage = document.querySelector("#order-summary img");
-
-        // Definir imagem de acordo com o caldo selecionado
+        
         const selectedBrothId = localStorage.getItem("selectedBrothId");
         if (selectedBrothId && brothImages[selectedBrothId]) {
             ramenImage.src = brothImages[selectedBrothId];

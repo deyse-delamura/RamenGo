@@ -46,6 +46,8 @@ body, html {
 
 /* Definição das posições dos itens no grid em telas grandes */
 .logo {
+    font-size: 2vw;
+    font-weight: 900;
     color: #FFC024;
     width:15%;
     position: absolute;
@@ -99,12 +101,22 @@ body, html {
 .order-now button{   
     width: 100%; 
     font-size: 1.2vw;
+    border: none;
     border-radius: 50px;
     background: #1820EF;
     color: #FFFFFF;
     z-index: 2;
-    text-align: left;
-    padding: 20px 20px;
+    padding: 20px 30px;
+}
+
+.order-now span {
+    float: left;
+}
+
+.order-now img {
+    float: right;
+    display: inline;
+    justify-content: center;
 }
 
 .illustration {
