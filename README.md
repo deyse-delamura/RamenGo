@@ -15,9 +15,9 @@ O **RamenGo** é uma aplicação simples e intuitiva desenvolvida como parte de 
 🔹 **Camada de Aplicação**: Gerencia a comunicação entre o domínio e a infraestrutura.  
 🔹 **Camada de Infraestrutura**: Faz a comunicação com bancos de dados e serviços externos.  
 🔹 **Endpoints Principais**:
-  - `GET /api/v1/caldos` - Lista todos os caldos disponíveis.
-  - `GET /api/v1/proteinas` - Lista todas as proteínas disponíveis.
-  - `POST /api/v1/pedido` - Processa o pedido e retorna o preço total e o número de confirmação.
+  - `GET /caldos` - Lista todos os caldos disponíveis.
+  - `GET /proteinas` - Lista todas as proteínas disponíveis.
+  - `POST /pedido/realizar` - Processa o pedido e retorna o preço total e o número de confirmação.
 
 ### 🖼️ **Frontend: HTML, CSS e JavaScript Puro**
 O front-end foi construído bom base no design proposto no figma. 
