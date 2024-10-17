@@ -31,7 +31,7 @@ namespace RamenGoApi.Application.Services
             // Gerar o ID do pedido a partir do serviço externo
             var orderId = await _orderIdGeneratorService.GenerateOrderIdAsync();
 
-            return Pedido(caldo, proteina, orderId);
+            return new Pedido(caldo, proteina, orderId);
         }
     }
 }
