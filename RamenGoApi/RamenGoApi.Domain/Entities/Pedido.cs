@@ -2,9 +2,16 @@
 {
     public class Pedido
     {
-        public string Id { get; set; }
-        public Caldo Caldo { get; set; }
-        public Proteina Proteina { get; set; }
+        public Pedido(Caldo caldo, Proteina proteina, string orderId)
+        {
+            Id = orderId;
+            Caldo = caldo;
+            Proteina = proteina;
+        }
+
+        public string Id { get; }
+        public Caldo Caldo { get; }
+        public Proteina Proteina { get; }
 
         public decimal GetTotalPrice() => Caldo.Price + Proteina.Price;
     }
