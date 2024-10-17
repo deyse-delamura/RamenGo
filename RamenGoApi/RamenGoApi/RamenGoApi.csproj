@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RamenGoApi.Application\RamenGoApi.Application.csproj" />
+    <ProjectReference Include="..\RamenGoApi.Infrastructure\RamenGoApi.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

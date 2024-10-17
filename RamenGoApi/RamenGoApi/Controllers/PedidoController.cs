@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RamenGoApi.Application.DTOs;
-using RamenGoApi.Application.Services;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using RamenGoApi.Application.Commands;
+using RamenGoApi.Application.Interfaces;
+using RamenGoApi.DTOs;
 
 namespace RamenGoApi.Controllers
 {
@@ -8,11 +10,13 @@ namespace RamenGoApi.Controllers
     [ApiController]
     public class PedidoController : ControllerBase
     {
-        private readonly PedidoService _pedidoService;
+        private readonly IPedidoService _pedidoService;
+        private readonly IMapper _mapper;
 
-        public PedidoController(PedidoService pedidoService)
+        public PedidoController(IPedidoService pedidoService, IMapper mapper)
         {
             _pedidoService = pedidoService;
+            _mapper = mapper;
         }
 
         [HttpPost("Realizar")]
@@ -20,13 +24,11 @@ namespace RamenGoApi.Controllers
         {
             try
             {
-                var pedido = await _pedidoService.ProcessarPedidoAsync(request);
-                return Ok(new
-                {
-                    PedidoId = pedido.Id,
-                    Descricao = $"{pedido.Caldo.Name} and {pedido.Proteina.Name}",
-                    Total = pedido.GetTotalPrice()
-                });
+                var command = _mapper.Map<CriarPedidoCommand>(request);
+                var pedido = await _pedidoService.ProcessarPedidoAsync(command);
+                var response = _mapper.Map<PedidoResponse>(pedido);
+
+                return Ok(response);
             }
             catch (ArgumentException ex)
             {

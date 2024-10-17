@@ -1,9 +1,11 @@
 using Microsoft.Extensions.Options;
+using RamenGoApi.Application.Interfaces;
 using RamenGoApi.Application.Services;
 using RamenGoApi.Domain.Repositories;
 using RamenGoApi.Infrastructure.Configurations;
 using RamenGoApi.Infrastructure.ExternalServices;
 using RamenGoApi.Infrastructure.Persistence;
+using RamenGoApi.Mappers;
 using RamenGoApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,8 +28,9 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IProteinaRepository, ProteinaRepository>();
 builder.Services.AddScoped<ICaldoRepository, CaldoRepository>();
 
-// Registra as factories e services
-builder.Services.AddScoped<PedidoService>();
+// Registra os services
+builder.Services.AddScoped<IPedidoService, PedidoService>();
+builder.Services.AddScoped<IOrderIdGeneratorExternalService, OrderIdGeneratorService>();
 
 // Registra o serviço externo de geração de IDs com HttpClient
 //builder.Services.AddHttpClient<OrderIdGeneratorService>();
@@ -47,6 +50,8 @@ builder.Services.AddHttpClient<OrderIdGeneratorService>((provider, client) =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 var app = builder.Build();
 

@@ -1,27 +1,27 @@
-﻿using RamenGoApi.Application.DTOs;
+﻿using RamenGoApi.Application.Commands;
+using RamenGoApi.Application.Interfaces;
 using RamenGoApi.Domain.Entities;
 using RamenGoApi.Domain.Repositories;
-using RamenGoApi.Infrastructure.ExternalServices;
 
 namespace RamenGoApi.Application.Services
 {
-    public class PedidoService
+    public class PedidoService : IPedidoService
     {
-        private readonly OrderIdGeneratorService _orderIdGeneratorService;
+        private readonly IOrderIdGeneratorExternalService _orderIdGeneratorService;
         private readonly ICaldoRepository _caldoRepository;
         private readonly IProteinaRepository _proteinaRepository;
 
-        public PedidoService(ICaldoRepository caldoRepository, IProteinaRepository proteinaRepository, OrderIdGeneratorService orderIdGeneratorService) 
+        public PedidoService(ICaldoRepository caldoRepository, IProteinaRepository proteinaRepository, IOrderIdGeneratorExternalService orderIdGeneratorService) 
         {
             _orderIdGeneratorService = orderIdGeneratorService;
             _caldoRepository = caldoRepository; 
             _proteinaRepository = proteinaRepository;
         }
 
-        public async Task<Pedido> ProcessarPedidoAsync(PedidoRequest request)
+        public async Task<Pedido> ProcessarPedidoAsync(CriarPedidoCommand command)
         {
-            var caldo = GetCaldo(request.CaldoId);
-            var proteina = GetProteina(request.ProteinaId);
+            var caldo = GetCaldo(command.CaldoId);
+            var proteina = GetProteina(command.ProteinaId);
 
             var orderId = await _orderIdGeneratorService.GenerateOrderIdAsync();
 

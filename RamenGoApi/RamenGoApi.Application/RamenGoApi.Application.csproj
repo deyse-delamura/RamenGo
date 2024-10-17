@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RamenGoApi.Domain\RamenGoApi.Domain.csproj" />
-    <ProjectReference Include="..\RamenGoApi.Infrastructure\RamenGoApi.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

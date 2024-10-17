@@ -1,6 +1,6 @@
-﻿namespace RamenGoApi.Application.DTOs
+﻿namespace RamenGoApi.Application.Commands
 {
-    public class PedidoRequest
+    public class CriarPedidoCommand
     {
         public string CaldoId { get; set; }
         public string ProteinaId { get; set; }

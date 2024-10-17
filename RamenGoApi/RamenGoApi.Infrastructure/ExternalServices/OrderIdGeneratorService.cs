@@ -1,9 +1,10 @@
 ﻿using Newtonsoft.Json;
+using RamenGoApi.Application.Interfaces;
 using RamenGoApi.Infrastructure.DTOs;
 
 namespace RamenGoApi.Infrastructure.ExternalServices
 {
-    public class OrderIdGeneratorService
+    public class OrderIdGeneratorService : IOrderIdGeneratorExternalService
     {
         private readonly HttpClient _httpClient;
 

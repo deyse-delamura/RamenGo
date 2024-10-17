@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RamenGoApi.Domain\RamenGoApi.Domain.csproj" />
+    <ProjectReference Include="..\RamenGoApi.Application\RamenGoApi.Application.csproj" />
     <ProjectReference Include="..\RamenGoApi.Domain\RamenGoApi.Domain.csproj" />
   </ItemGroup>
 

@@ -1,17 +1,10 @@
 ﻿namespace RamenGoApi.Domain.Entities
 {
-    public class Pedido
+    public class Pedido(Caldo caldo, Proteina proteina, string orderId)
     {
-        public Pedido(Caldo caldo, Proteina proteina, string orderId)
-        {
-            Id = orderId;
-            Caldo = caldo;
-            Proteina = proteina;
-        }
-
-        public string Id { get; }
-        public Caldo Caldo { get; }
-        public Proteina Proteina { get; }
+        public string Id { get; } = orderId;
+        public Caldo Caldo { get; } = caldo;
+        public Proteina Proteina { get; } = proteina;
 
         public decimal GetTotalPrice() => Caldo.Price + Proteina.Price;
     }
