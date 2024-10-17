@@ -58,7 +58,7 @@ Abra o arquivo index.html no seu navegador ou use uma extensão como Live Server
 ---
 
 ## 📚 **Tecnologias Utilizadas**
-- **Backend**: .NET Core, C#, Arquitetura Hexagonal, DDD  
+- **Backend**: .NET Core, C#
 - **Frontend**: HTML, CSS, JavaScript  
 - **Ferramentas de Versionamento**: Git, GitHub  
 
