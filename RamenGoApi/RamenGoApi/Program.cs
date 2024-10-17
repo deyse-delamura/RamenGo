@@ -1,7 +1,6 @@
 using Microsoft.Extensions.Options;
 using RamenGoApi.Application.Services;
 using RamenGoApi.Domain.Repositories;
-using RamenGoApi.Domain.Services;
 using RamenGoApi.Infrastructure.Configurations;
 using RamenGoApi.Infrastructure.ExternalServices;
 using RamenGoApi.Infrastructure.Persistence;
@@ -28,7 +27,6 @@ builder.Services.AddScoped<IProteinaRepository, ProteinaRepository>();
 builder.Services.AddScoped<ICaldoRepository, CaldoRepository>();
 
 // Registra as factories e services
-builder.Services.AddScoped<PedidoFactory>();
 builder.Services.AddScoped<PedidoService>();
 
 // Registra o serviço externo de geração de IDs com HttpClient
