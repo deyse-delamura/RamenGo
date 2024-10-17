@@ -86,3 +86,8 @@
 /RamenGoApi/RamenGoApi.Infrastructure/bin/Debug/net8.0/RamenGoApi.Application.dll
 /RamenGoApi/RamenGoApi.Infrastructure/bin/Debug/net8.0/RamenGoApi.Application.pdb
 /RamenGoApi/RamenGoApi/bin/Debug/net8.0/AutoMapper.dll
+/RamenGoApi/RamenGoApi/bin/Debug/net8.0/RamenGoApi.deps.json
+/RamenGoApi/RamenGoApi.Application/bin/Debug/net8.0/RamenGoApi.Application.deps.json
+/RamenGoApi/RamenGoApi.Infrastructure/bin/Debug/net8.0/RamenGoApi.Infrastructure.deps.json
+/RamenGoApi/RamenGoApi.Application/obj/Debug/net8.0/RamenGoApi.Application.csproj.FileListAbsolute.txt
+/RamenGoApi/RamenGoApi.Infrastructure/obj/Debug/net8.0/RamenGoApi.Infrastructure.csproj.FileListAbsolute.txt
