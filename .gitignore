@@ -2,11 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/RamenGoApi/.vs/RamenGoApi/FileContentIndex
-/RamenGoApi/.vs/RamenGoApi/v17
-/RamenGoApi/.vs/RamenGoApi/config/applicationhost.config
-/RamenGoApi/.vs/RamenGoApi/v16/.suo
-/RamenGoApi/.vs/RamenGoApi/DesignTimeBuild/.dtbcache.v2
+/RamenGoApi/.vs/
 bin/
 obj/
 /RamenGoApi/RamenGoApi/obj/
