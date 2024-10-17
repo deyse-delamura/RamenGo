@@ -1,6 +1,8 @@
+using Microsoft.Extensions.Options;
 using RamenGoApi.Application.Services;
 using RamenGoApi.Domain.Repositories;
 using RamenGoApi.Domain.Services;
+using RamenGoApi.Infrastructure.Configurations;
 using RamenGoApi.Infrastructure.ExternalServices;
 using RamenGoApi.Infrastructure.Persistence;
 using RamenGoApi.Middleware;
@@ -30,7 +32,19 @@ builder.Services.AddScoped<PedidoFactory>();
 builder.Services.AddScoped<PedidoService>();
 
 // Registra o serviço externo de geração de IDs com HttpClient
-builder.Services.AddHttpClient<OrderIdGeneratorService>();
+//builder.Services.AddHttpClient<OrderIdGeneratorService>();
+
+// Vincular as configurações do OrderServiceOptions
+builder.Services.Configure<OrderServiceOptions>(builder.Configuration.GetSection("OrderService"));
+
+// Configurar o HttpClient com BaseAddress e headers padrão
+builder.Services.AddHttpClient<OrderIdGeneratorService>((provider, client) =>
+{
+    var options = provider.GetRequiredService<IOptions<OrderServiceOptions>>().Value;
+    client.BaseAddress = new Uri(options.BaseUrl);
+    client.DefaultRequestHeaders.Add("x-api-key", options.ApiKey);
+});
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

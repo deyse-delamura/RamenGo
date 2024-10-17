@@ -14,10 +14,7 @@ namespace RamenGoApi.Infrastructure.ExternalServices
 
         public async Task<string> GenerateOrderIdAsync()
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "https://api.tech.redventures.com.br/orders/generate-id");
-            request.Headers.Add("x-api-key", "ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf");
-
-            var response = await _httpClient.SendAsync(request);
+            var response = await _httpClient.PostAsync("/orders/generate-id", null);
 
             if (!response.IsSuccessStatusCode)
             {
